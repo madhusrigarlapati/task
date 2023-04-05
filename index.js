@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 app.use('/', indexRouter);
 
 app.use(express.static(path.resolve('./public')));
-app.listen(8080, () => {
+app.listen(8080 || process.env.PORT, () => {
     console.log('http://localhost:8080/');
 })
 
